@@ -7,7 +7,6 @@
 .sfdx/
 .localdevserver/
 deploy-options.json
-.vim-force.com/session.properties
 
 # LWC VSCode autocomplete
 **/lwc/jsconfig.json
