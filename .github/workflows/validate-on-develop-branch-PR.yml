@@ -181,7 +181,7 @@ jobs:
             - name: 'Check-only deploy delta changes - run all tests'
               # if: ${{ env.APEX_TESTS == 'all' }}
               run: |
-                  if [-d "changed-sources/force-app"]; then
+                  if [-d changed-sources/force-app]; then
                       echo "Directory Exists"
                       sfdx force:source:deploy -p "changed-sources/force-app" --checkonly --testlevel RunLocalTests  --json
                   else
@@ -190,7 +190,7 @@ jobs:
 
             - name: 'Deploy destructive changes (if any)'
               run: |
-                  if [-d "changed-sources/destructiveChanges"]; then
+                  if [-d changed-sources/destructiveChanges]; then
                       echo "Directory Exists"
                       sfdx force:mdapi:deploy -d "changed-sources/destructiveChanges" --checkonly --ignorewarnings
                   else
