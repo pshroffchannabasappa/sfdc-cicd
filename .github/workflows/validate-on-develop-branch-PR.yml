@@ -185,5 +185,5 @@ jobs:
 
             - name: 'Deploy destructive changes (if any)'
               run: |                  
-                    sfdx force:mdapi:deploy -d destructiveChanges/destructiveChanges.xml --checkonly --ignorewarnings
+                    sfdx force:mdapi:deploy -d destructiveChanges --checkonly --ignorewarnings
                   
